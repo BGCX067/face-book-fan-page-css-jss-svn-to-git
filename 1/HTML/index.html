@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Infra Window</title>
+<link rel="stylesheet" type="text/css" href="css/style_main.css" />
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+
+
+<!--=============ACCORDING=================-->
+
+   <!-- The JavaScript -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#accordion > li').hover(
+                    function () {
+                        var $this = $(this);
+                        $this.stop().animate({'width':'435px'},500);
+						
+						 
+                        $('.heading',$this).stop(true,true)();
+                        $('.bgDescription',$this).stop(true,true).slideDown(500);
+                        $('.description',$this).stop(true,true).fadeIn();
+                    },
+                    function () {
+                        var $this = $(this);
+                        $this.stop().animate({'width':'115px'},1000);
+						
+                        $('.heading',$this).stop(true,true).fadeIn();
+                        $('.description',$this).stop(true,true).fadeOut(500);
+                        $('.bgDescription',$this).stop(true,true).slideUp(700);
+                    }
+                );
+            });
+        </script>
+        
+        
+         <script type="text/javascript">
+            $(function() {
+                $('#accordion > li.bg4').hover(
+                    function () {
+                        var $this = $(this);
+                        $this.stop().animate({'width':'435px'},500);
+						
+						 
+                        
+                    },
+                    function () {
+                        var $this = $(this);
+                        $this.stop().animate({'width':'435px'},1000);
+						
+                       
+                    }
+                );
+            });
+        </script>
+        
+        
+<!--=================ACCORDING END========================-->
+ <!--===========CONTENT TAB ====================-->       
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.scrollto.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+
+	$('#hero-slider ul a').click(function () {
+	
+		//reset all the items
+		$('.customBlock ul a').removeClass('active');
+		
+		//set current item as active
+		$(this).addClass('active');	
+		
+		//scroll it to the right position
+		$('.mask').scrollTo($(this).attr('rel'), 300);
+		
+		//disable click event
+	    return false;		
+		
+	});
+	
+});
+</script>
+        
+     
+<!--======================CONTENT TAB END==========-->
+
+<!--=========TICKER==================-->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery.Scroller-1.0.min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+<!--
+$(document).ready(function() {
+
+	//create scroller for each element with "horizontal_scroller" class...
+	$('.horizontal_scroller').SetScroller({	velocity: 	 65,
+											direction: 	 'horizontal',
+											startfrom: 	 'right',
+											loop:		 'infinite',
+											movetype: 	 'switch',
+											onmouseover: 'pause',
+											onmouseout:  'play',
+											onstartup: 	 'play',
+											cursor: 	 'pointer'
+										});
+	/*
+		All possible values for options...
+		
+		velocity: 		from 1 to 99 								[default is 50]						
+		direction: 		'horizontal' or 'vertical' 					[default is 'horizontal']
+		startfrom: 		'left' or 'right' for horizontal direction 	[default is 'right']
+						'top' or 'bottom' for vertical direction	[default is 'bottom']
+		loop:			from 1 to n+, or set 'infinite'				[default is 'infinite']
+		movetype:		'linear' or 'pingpong'						[default is 'linear']
+		onmouseover:	'play' or 'pause'							[default is 'pause']
+		onmouseout:		'play' or 'pause'							[default is 'play']
+		onstartup: 		'play' or 'pause'							[default is 'play']
+		cursor: 		'pointer' or any other CSS style			[default is 'pointer']
+	*/
+
+	//how to overwrite options after setup and without deleting the other settings...
+	$('#no_mouse_events').ResetScroller({	onmouseover: 'play', onmouseout: 'play'   });
+	$('#scrollercontrol').ResetScroller({	velocity: 85, startfrom: 'left'   });
+
+	//if you need to remove the scrolling animation, uncomment the following line...
+	//$('#scrollercontrol').RemoveScroller();
+
+	//how to play or stop scrolling animation outside the scroller... 
+	$('#play_scrollercontrol').mouseover(function(){   $('#scrollercontrol').PlayScroller();   });
+	$('#stop_scrollercontrol').mouseover(function(){   $('#scrollercontrol').PauseScroller();  });		
+
+	//create a vertical scroller...	
+	$('.vertical_scroller').SetScroller({	velocity: 80, direction: 'vertical'  });		
+	
+	//"$('#soccer_ball_container')" inherits scrolling options from "$('.horizontal_scroller')",
+	// then I reset new options; besides, "$('#soccer_ball_container')" will wraps and scrolls the bouncing animation...
+	$('#soccer_ball_container').ResetScroller({	 velocity: 85, movetype: 'typeof', onmouseover: 'play', onmouseout: 'play'  });
+
+	//create soccer ball bouncing animation...
+	$('#soccer_ball').bind('bouncer', function(){
+			$(this).animate({top:42}, 500, 'linear').animate({top:5}, 500, 'linear', function(){$('#soccer_ball').trigger('bouncer');});			
+	}).trigger('bouncer');
+
+});
+//-->
+</script>
+<!--================= TICKER END==-->
+
+
+<!--============================NEWS TCIEKR 2==============================-->
+
+<!--============================NEWS TCIEKR 2 END==========================-->
+
+
+</head>
+<body>
+<div id="logo">
+    
+<img src="images/logo-06.png" width="587" height="85" />
+    	
+</div><!--================ logo END=============-->  
+<div id="wrapper">
+<iframe src="acc.html" width="800" id="overflow" height="480" frameborder="0"></iframe>
+
+</div><!--=================wrapper END====================-->
+
+
+<div id="menu">
+
+<div>
+
+<div class="horizontal_scroller" id="no_mouse_events">
+  <div class="scrollingtext">
+		<ul>
+         <li>News</li>
+    	 <li>Academia</li>
+        <li>Product Gallery</li>
+        <li>Jobs</li>
+        <li>Projects</li>
+        <li>People</li>
+      	 <li>E Maketplace</li>
+        <li>Design Lab</li>
+        <li>Eco Development</li>
+        
+        
+        </ul>
+	</div>
+</div>
+
+
+</div>
+
+
+</div><!--====== MENU END=========================-->       
+
+
+<div id="header">
+<img src="images/header-01.jpg" />
+    	
+</div><!--================ HEADER END=============-->
+    
+<div id="Maincontent">
+    	
+ 
+
+
+
+
+
+    
+
+</body>
+</html>

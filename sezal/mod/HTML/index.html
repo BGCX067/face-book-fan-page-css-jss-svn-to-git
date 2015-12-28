@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Infra Window</title>
+<link rel="stylesheet" type="text/css" href="css/style_main.css" />
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+
+
+<!--=============ACCORDING=================-->
+
+   <!-- The JavaScript -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#accordion > li').hover(
+                    function () {
+                        var $this = $(this);
+                        $this.stop().animate({'width':'435px'},500);
+						
+						 
+                        $('.heading',$this).stop(true,true)();
+                        $('.bgDescription',$this).stop(true,true).slideDown(500);
+                        $('.description',$this).stop(true,true).fadeIn();
+                    },
+                    function () {
+                        var $this = $(this);
+                        $this.stop().animate({'width':'115px'},1000);
+						
+                        $('.heading',$this).stop(true,true).fadeIn();
+                        $('.description',$this).stop(true,true).fadeOut(500);
+                        $('.bgDescription',$this).stop(true,true).slideUp(700);
+                    }
+                );
+            });
+        </script>
+        
+        
+         <script type="text/javascript">
+            $(function() {
+                $('#accordion > li.bg4').hover(
+                    function () {
+                        var $this = $(this);
+                        $this.stop().animate({'width':'435px'},500);
+						
+						 
+                        
+                    },
+                    function () {
+                        var $this = $(this);
+                        $this.stop().animate({'width':'435px'},1000);
+						
+                       
+                    }
+                );
+            });
+        </script>
+        
+        
+<!--=================ACCORDING END========================-->
+ <!--===========CONTENT TAB ====================-->       
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.scrollto.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+
+	$('#hero-slider ul a').click(function () {
+	
+		//reset all the items
+		$('.customBlock ul a').removeClass('active');
+		
+		//set current item as active
+		$(this).addClass('active');	
+		
+		//scroll it to the right position
+		$('.mask').scrollTo($(this).attr('rel'), 300);
+		
+		//disable click event
+	    return false;		
+		
+	});
+	
+});
+</script>
+        
+     
+<!--======================CONTENT TAB END==========-->
+
+<!--=========TICKER==================-->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery.Scroller-1.0.min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+<!--
+$(document).ready(function() {
+
+	//create scroller for each element with "horizontal_scroller" class...
+	$('.horizontal_scroller').SetScroller({	velocity: 	 65,
+											direction: 	 'horizontal',
+											startfrom: 	 'right',
+											loop:		 'infinite',
+											movetype: 	 'switch',
+											onmouseover: 'pause',
+											onmouseout:  'play',
+											onstartup: 	 'play',
+											cursor: 	 'pointer'
+										});
+	/*
+		All possible values for options...
+		
+		velocity: 		from 1 to 99 								[default is 50]						
+		direction: 		'horizontal' or 'vertical' 					[default is 'horizontal']
+		startfrom: 		'left' or 'right' for horizontal direction 	[default is 'right']
+						'top' or 'bottom' for vertical direction	[default is 'bottom']
+		loop:			from 1 to n+, or set 'infinite'				[default is 'infinite']
+		movetype:		'linear' or 'pingpong'						[default is 'linear']
+		onmouseover:	'play' or 'pause'							[default is 'pause']
+		onmouseout:		'play' or 'pause'							[default is 'play']
+		onstartup: 		'play' or 'pause'							[default is 'play']
+		cursor: 		'pointer' or any other CSS style			[default is 'pointer']
+	*/
+
+	//how to overwrite options after setup and without deleting the other settings...
+	$('#no_mouse_events').ResetScroller({	onmouseover: 'play', onmouseout: 'play'   });
+	$('#scrollercontrol').ResetScroller({	velocity: 85, startfrom: 'left'   });
+
+	//if you need to remove the scrolling animation, uncomment the following line...
+	//$('#scrollercontrol').RemoveScroller();
+
+	//how to play or stop scrolling animation outside the scroller... 
+	$('#play_scrollercontrol').mouseover(function(){   $('#scrollercontrol').PlayScroller();   });
+	$('#stop_scrollercontrol').mouseover(function(){   $('#scrollercontrol').PauseScroller();  });		
+
+	//create a vertical scroller...	
+	$('.vertical_scroller').SetScroller({	velocity: 80, direction: 'vertical'  });		
+	
+	//"$('#soccer_ball_container')" inherits scrolling options from "$('.horizontal_scroller')",
+	// then I reset new options; besides, "$('#soccer_ball_container')" will wraps and scrolls the bouncing animation...
+	$('#soccer_ball_container').ResetScroller({	 velocity: 85, movetype: 'typeof', onmouseover: 'play', onmouseout: 'play'  });
+
+	//create soccer ball bouncing animation...
+	$('#soccer_ball').bind('bouncer', function(){
+			$(this).animate({top:42}, 500, 'linear').animate({top:5}, 500, 'linear', function(){$('#soccer_ball').trigger('bouncer');});			
+	}).trigger('bouncer');
+
+});
+//-->
+</script>
+<!--================= TICKER END==-->
+
+
+<!--============================NEWS TCIEKR 2==============================-->
+
+<!--============================NEWS TCIEKR 2 END==========================-->
+
+
+</head>
+<body>
+<div id="body1">
+<div id="logo" class="fl">
+    
+<a href="https://www.facebook.com/infrawindow/app_190322544333196"><img src="images/logo-06.png" width="592" height="102" /></a>
+
+</div><!--================ logo END=============-->  
+      
+      
+      <div id="facebook" class="fr">
+      
+        <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Finfrawindow&amp;width=252&amp;height=275&amp;colorscheme=light&amp;show_faces=false&amp;border_color&amp;stream=false&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:252px; height:105px;" allowTransparency="true"></iframe>
+
+      </div>
+ </div><!--body1 END-->     
+      
+<div id="wrapper">
+<iframe src="acc.html" width="800" id="overflow" height="480" frameborder="0"></iframe>
+
+</div><!--=================wrapper END====================-->
+
+
+
+
+        
+        
+
+<div id="menu">
+
+
+ <script type="text/javascript">
+
+/***********************************************
+* Memory Scroller script- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var memorywidth="790px;" //scroller width
+var memoryheight="20px" //scroller height
+var memorybgcolor="#C51618" //scroller background
+var memorypadding="25px" //padding applied to the scroller. 0 for non.
+var borderCSS="border: 1px solid white;" //Border CSS, applied to scroller to give border.
+
+var memoryspeed=2 //Scroller speed (larger is faster 1-10)
+var pauseit=1 //Pause scroller onMousever (0=no. 1=yes)?
+
+var persistlastviewedmsg=0 //should scroller's position persist after users navigate away (1=yes, 0=no)?
+var persistmsgbehavior="onload" //set to "onload" or "onclick".
+
+//Specify the scroller's content (don't delete <nobr> tag)
+//Keep all content on ONE line, and backslash any single quotations (ie: that\'s great):
+
+var memorycontent='<nobr><span style="font: bold 13px Verdana">News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development  | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development | News |   	 Academia | Product Gallery | Jobs | Projects | People | E Maketplace | Design Lab | Eco Development  </span></nobr>'
+
+
+////NO NEED TO EDIT BELOW THIS LINE////////////
+var combinedcssTable="width:"+(parseInt(memorywidth)+6)+"px;background-color:"+memorybgcolor+";padding:"+memorypadding+";"+borderCSS+";"
+var combinedcss="width:"+memorywidth+";height:"+memoryheight+";"
+
+var divonclick=(persistlastviewedmsg && persistmsgbehavior=="onclick")? 'onClick="savelastmsg()" ' : ''
+memoryspeed=(document.all)? memoryspeed : Math.max(1, memoryspeed-1) //slow speed down by 1 for NS
+var copyspeed=memoryspeed
+var pausespeed=(pauseit==0)? copyspeed: 0
+var iedom=document.all||document.getElementById
+if (iedom)
+document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-10000px">'+memorycontent+'</span>')
+var actualwidth=''
+var memoryscroller
+
+if (window.addEventListener)
+window.addEventListener("load", populatescroller, false)
+else if (window.attachEvent)
+window.attachEvent("onload", populatescroller)
+else if (document.all || document.getElementById)
+window.onload=populatescroller
+
+function populatescroller(){
+memoryscroller=document.getElementById? document.getElementById("memoryscroller") : document.all.memoryscroller
+memoryscroller.style.left=parseInt(memorywidth)+8+"px"
+if (persistlastviewedmsg && get_cookie("lastscrollerpos")!="")
+revivelastmsg()
+memoryscroller.innerHTML=memorycontent
+actualwidth=document.all? temp.offsetWidth : document.getElementById("temp").offsetWidth
+lefttime=setInterval("scrollmarquee()",20)
+}
+
+function get_cookie(Name) {
+var search = Name + "="
+var returnvalue = ""
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search)
+if (offset != -1) {
+offset += search.length
+end = document.cookie.indexOf(";", offset)
+if (end == -1)
+end = document.cookie.length;
+returnvalue=unescape(document.cookie.substring(offset, end))
+}
+}
+return returnvalue;
+}
+
+function savelastmsg(){
+document.cookie="lastscrollerpos="+memoryscroller.style.left
+}
+
+function revivelastmsg(){
+lastscrollerpos=parseInt(get_cookie("lastscrollerpos"))
+memoryscroller.style.left=parseInt(lastscrollerpos)+"px"
+}
+
+if (persistlastviewedmsg && persistmsgbehavior=="onload")
+window.onunload=savelastmsg
+
+function scrollmarquee(){
+if (parseInt(memoryscroller.style.left)>(actualwidth*(-1)+8))
+memoryscroller.style.left=parseInt(memoryscroller.style.left)-copyspeed+"px"
+else
+memoryscroller.style.left=parseInt(memorywidth)+8+"px"
+}
+
+if (iedom){
+with (document){
+document.write('<table border="0" cellspacing="0" cellpadding="0" style="'+combinedcssTable+'"><td>')
+write('<div style="position:relative;overflow:hidden;'+combinedcss+'" onMouseover="copyspeed=pausespeed" onMouseout="copyspeed=memoryspeed">')
+write('<div id="memoryscroller" style="position:absolute;left:0px;top:0px;" '+divonclick+'></div>')
+write('</div>')
+document.write('</td></table>')
+}
+}
+</script>
+ 
+
+
+
+
+<div>
+
+<div class="horizontal_scroller" id="no_mouse_events">
+  <div class="scrollingtext">
+		<ul>
+         
+        
+        
+        </ul>
+	</div>
+</div>
+
+
+</div>
+
+
+</div><!--====== MENU END=========================-->       
+
+
+<div id="header">
+<img src="images/header-01.jpg" />
+    	
+</div><!--================ HEADER END=============-->
+    
+<div id="Maincontent">
+    	
+ 
+
+
+
+
+
+    
+
+</body>
+</html>

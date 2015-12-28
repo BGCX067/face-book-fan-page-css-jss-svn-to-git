@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="js/newsticker.js"></script>
+<script>
+
+	function tick(){
+		$('#ticker li:first').slideUp( function () { $(this).appendTo($('#ticker')).slideDown(); });
+	}
+	setInterval(function(){ tick () }, 5000);
+
+
+</script>
+
+
+<style>#ticker {
+	height: 180px;
+	overflow: hidden;
+	width: 780px;
+	overflow:hidden;
+
+
+}
+#ticker li {
+	height: 180px;
+	list-style:none;
+	width:780px;
+}
+
+
+/************************/
+/* WORKSHOP STYLE       */
+/************************/
+
+.bar {
+	background-color: #111;
+	color: #f0f0f0;
+	box-shadow: 0px 0px 2px #333;
+	line-height: 25px;
+
+}
+.bar a {
+	color: #DDD;
+	text-decoration: none;
+}
+.bar a:hover {
+	color: #FFFFFF;
+}
+
+#image{width:150px; height:170px; float:left;}
+#text{width:600px; height:170px; float:left;}
+p{font-size:18px; color:#666; float:left; margin-left:10px; height:180px; padding-right:5px;}
+a{font-size:24px; text-decoration:none; color:#333;}
+#image img{width:150px; padding-top:25px; }
+a:hover{
+	color:#F00;
+	text-decoration:underline;
+}
+</style>
+</head>
+
+<body>
+
+<ul id="ticker">
+<li>
+			<div id="image">
+            <img src="images/ticker/karim.jpg"  />
+            </div>
+            <div id="text"><p><a href="http://www.infrawindow.com/design-lab/india-the-power-house-of-design-needs-smart-ideas-to-reach-global-karim-rashid_392/">India, the Power House of Design, needs smart ideas to reach global: Karim Rashid	</a><br> Karim Rashid, in an interview with Debajyoti Samal, says despite good designers & good design sense India lacks in branding its own designs </p></div>
+		</li>
+		<li>
+			<div id="image">
+            <img src="images/ticker/chair.jpg" />
+            </div>
+            <div id="text"><p><a href="http://www.infrawindow.com/design-lab/would-you-spend-a-whopping-039-one-lakh-039-for-this-easy-chair-_360/">Would you spend a whopping 'One Lakh' for this Easy Chair?</a><br> Anuj Ambalal of 'A Cube' whose 'Bouncer Chair' bagged prestigious Design Mile competition tells us how to make it big as a bespoke furniture designer  </p></div>
+		</li>
+		<li>
+			<div id="image">
+            <img src="images/ticker/1333366004_fusion-of-science-with-design-can-solve-majority-o.png.jpg" />
+            </div>
+            <div id="text"><p><a href="http://www.infrawindow.com/design-lab/fusion-of-science-with-design-can-solve-majority-of-the-world-problems-adam-bly_341/">Fusion of Science with Design can solve majority of the world problems: Adam Bly</a><br>Adam Bly, Vice Chairman of WEF's Global Design Council, tells Debajyoti Samal how Science+Design brings forth new opportunities in innovation. </p></div>
+		</li>
+		<li>
+			<div id="image">
+            <img src="images/ticker/1332838749_architecture-is-too-static-we-enjoy-engaging-peopl.jpg"/>
+            </div>
+            <div id="text"><p><a href="http://www.infrawindow.com/design-lab/architecture-is-too-static-we-enjoy-engaging-people-at-human-level-alex-white-mazzarella_307/">Architecture is too static…We enjoy engaging people at human level: Alex White Mazzarella</a><br>Architect-turned-artist and founder of Artefacting, Alex White Mazzarella tells Debajyoti Samal how to engage people's humanity in places. </p></div>
+		</li>
+        
+        <li>
+			<div id="image">
+            <img src="images/ticker/1332479088_passive-design-approaches-to-design-right-from-con.jpg"/>
+            </div>
+            <div id="text"><p><a href="http://www.infrawindow.com/design-lab/passive-design-approaches-to-design-right-from-conceptual-stages-needed-for-world-development-architect-manit-rastogi_274/">Passive design approaches to design right from conceptual stages needed for world development: Architect Manit Rastogi</a><br>Architect Manit Rastogi, in an exclusive interview with Debajyoti Samal, talks about Architecture in contemporary India, green, sustainability & more </p></div>
+		</li>
+	</ul>
+
+
+</body>
+</html>

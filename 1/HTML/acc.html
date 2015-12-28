@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/style_main.css" />
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+
+
+<!--=============ACCORDING=================-->
+
+   <!-- The JavaScript -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#accordion > li').hover(
+                    function () {
+                        var $this = $(this);
+                        $this.stop().animate({'width':'435px'},500);
+						
+						 
+                        $('.heading',$this).stop(true,true)();
+                        $('.bgDescription',$this).stop(true,true).slideDown(500);
+                        $('.description',$this).stop(true,true).fadeIn();
+                    },
+                    function () {
+                        var $this = $(this);
+                        $this.stop().animate({'width':'115px'},1000);
+						
+                        $('.heading',$this).stop(true,true).fadeIn();
+                        $('.description',$this).stop(true,true).fadeOut(500);
+                        $('.bgDescription',$this).stop(true,true).slideUp(700);
+                    }
+                );
+            });
+        </script>
+        
+        
+         <script type="text/javascript">
+            $(function() {
+                $('#accordion > li.bg4').hover(
+                    function () {
+                        var $this = $(this);
+                        $this.stop().animate({'width':'435px'},500);
+						
+						 
+                        
+                    },
+                    function () {
+                        var $this = $(this);
+                        $this.stop().animate({'width':'435px'},1000);
+						
+                       
+                    }
+                );
+            });
+        </script>
+
+</head>
+
+<body>
+<div id="me">
+<!--=============================ACCORDING MENU START=========-->
+<div id="accodrdingMenu" class="fl">
+<div id="content">
+            <a class="back" href="http://tympanus.net/codrops/2010/04/26/elegant-accordion-with-jquery-and-css3/"></a>
+  <ul class="accordion" id="accordion">
+          <li class="bg1">
+                    <div class="heading">Amazing Projects</div>
+    <div class="bgDescription"></div>
+                    <div class="description">
+                        <h2>Amazing Projects</h2>
+                        
+                     
+                    </div>
+                </li>
+          <li class="bg2">
+              <div class="heading">green spaces</div>
+              <div class="bgDescription"></div>
+              <div class="description">
+                  <h2>green spaces</h2>
+                 
+                  
+              </div>
+
+      </li>
+          <li class="bg3">
+<div class="heading">Interesting Products</div>
+                    <div class="bgDescription"></div>
+                    <div class="description">
+                        <h2>Interesting Products</h2>
+                        
+                       
+                    </div>
+
+                </li>
+                <li class="bg4 bleft">
+                    <div class="heading">The Inspiring Architects</div>
+                    <div class="bgDescription"></div>
+                    <div class="description">
+                        <h2>Reports & Statistics</h2>
+                       
+                        
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+</div>
+<!--=======================accodrdingMenu END===================-->
+</div>
+</body>
+</html>
